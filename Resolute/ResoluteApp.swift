@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct ResoluteApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("Resolute", systemImage: "tv.inset.filled") {
+            MainMenu()
         }
     }
 }
