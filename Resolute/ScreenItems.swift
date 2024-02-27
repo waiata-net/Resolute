@@ -11,56 +11,29 @@ struct ScreenItems: View {
     
     @State var screen: NSScreen
     
-    @State var bug: String = ""
-    
-    init(screen: NSScreen) {
-        self.screen = screen
-        self.bug = screen.resolutionLabel
-    }
+    @State var bug: Int32?
+    @State var refresh = false
     
     var body: some View {
-        Text(bug).hidden()
-            ForEach(screen.resolutions, id: \.debugDescription) { resolution in
-                
-                let on = Binding<Bool>(
-                    get: { screen.resolution == resolution },
-                    set: { _ in 
-                        screen.resolution = resolution
-                        bug = screen.resolutionLabel
-                    }
-                )
-                
-                Toggle(isOn: on) { 
-                    Text(String(format: "%.fx%.f", resolution.width, resolution.height))
-                }
-                .toggleStyle(.button)
+        Group {
+            Toggle(isOn: $refresh) {
+                Text(refresh.description)
             }
-        
-        
-        Divider()
-        
-        let rateModes = screen.modes(of: screen.resolution)
-        
-        ForEach(rateModes, id: \.self) { mode in
-            let on = Binding<Bool>(
-                get: { screen.mode?.refreshRate == mode.refreshRate },
-                set: { _ in
-                    screen.mode = mode
-                    bug = "\(screen.mode?.refreshRate ?? 0.0)"
-                }
-            )
-            Toggle(isOn: on) {
-                Text(String(format: "@%.2f", mode.refreshRate))
+            .onReceive(NotificationCenter.default.publisher(for: NSApplication.didChangeScreenParametersNotification)) { _ in
+                refresh.toggle()
             }
+            ResolutionItems(screen: screen)
+            Divider()
+            RefreshItems(screen: screen)
+            Divider()
+            WallpaperItem(screen: screen)
         }
     }
 }
 
 #Preview {
-    Menu("") {
-        ScreenItems(
-            screen: NSScreen.main!
-        )
+    Menu(NSScreen.main?.localizedName ?? "") {
+        ScreenItems(screen: NSScreen.main!)
     }
     .frame(width: 120)
 }

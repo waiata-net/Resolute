@@ -110,7 +110,7 @@ extension NSScreen: Identifiable {
     
     var modes: [Mode] {
         let options: CFDictionary = [kCGDisplayShowDuplicateLowResolutionModes: true] as CFDictionary
-        return (CGDisplayCopyAllDisplayModes(id, options) as? [Mode]) ?? []
+        return (CGDisplayCopyAllDisplayModes(id, options    ) as? [Mode]) ?? []
     }
     
     func modes(of resolution: CGSize?) -> [Mode] {
@@ -193,6 +193,24 @@ extension NSScreen: Identifiable {
     
     // MARK: - Wallpaper
     
+    var wallpaperURL: URL? {
+        get {
+            NSWorkspace.shared.desktopImageURL(for: self)
+        }
+        set {
+            guard let url = newValue else { return }
+            do {
+                try NSWorkspace.shared.setDesktopImageURL(url, for: self, options: wallpaperOptions)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    var wallpaperOptions: [NSWorkspace.DesktopImageOptionKey: Any] {
+        NSWorkspace.shared.desktopImageOptions(for: self) ?? [:]
+    }
+    
     var wallpaper: NSImage? {
         guard let url = NSWorkspace.shared.desktopImageURL(for: self),
               let image = NSImage(contentsOf: url),
@@ -210,10 +228,4 @@ extension NSScreen: Identifiable {
         return fill.cgColor
     }
     
-    
-    
-    
-    
-    
 }
-

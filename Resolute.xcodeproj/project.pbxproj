@@ -15,6 +15,12 @@
 		081BAA602B8E155F00EAC134 /* ScreenItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA5F2B8E155F00EAC134 /* ScreenItems.swift */; };
 		081BAA682B8E21AF00EAC134 /* ScreenMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA672B8E21AF00EAC134 /* ScreenMode.swift */; };
 		081BAA6A2B8E320900EAC134 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA692B8E320900EAC134 /* MainMenu.swift */; };
+		081BAA6E2B8E450700EAC134 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA6B2B8E450700EAC134 /* Picture.swift */; };
+		081BAA6F2B8E450700EAC134 /* PictureFitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA6C2B8E450700EAC134 /* PictureFitPicker.swift */; };
+		081BAA702B8E450700EAC134 /* PictureWell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA6D2B8E450700EAC134 /* PictureWell.swift */; };
+		081BAA722B8E4A0800EAC134 /* ResolutionItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA712B8E4A0800EAC134 /* ResolutionItems.swift */; };
+		081BAA742B8E4A3800EAC134 /* RefreshItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA732B8E4A3800EAC134 /* RefreshItems.swift */; };
+		081BAA762B8E4A4E00EAC134 /* WallpaperItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081BAA752B8E4A4E00EAC134 /* WallpaperItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		081BAA5F2B8E155F00EAC134 /* ScreenItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenItems.swift; sourceTree = "<group>"; };
 		081BAA672B8E21AF00EAC134 /* ScreenMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMode.swift; sourceTree = "<group>"; };
 		081BAA692B8E320900EAC134 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		081BAA6B2B8E450700EAC134 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		081BAA6C2B8E450700EAC134 /* PictureFitPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureFitPicker.swift; sourceTree = "<group>"; };
+		081BAA6D2B8E450700EAC134 /* PictureWell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureWell.swift; sourceTree = "<group>"; };
+		081BAA712B8E4A0800EAC134 /* ResolutionItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionItems.swift; sourceTree = "<group>"; };
+		081BAA732B8E4A3800EAC134 /* RefreshItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshItems.swift; sourceTree = "<group>"; };
+		081BAA752B8E4A4E00EAC134 /* WallpaperItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,14 @@
 				081BAA692B8E320900EAC134 /* MainMenu.swift */,
 				081BAA5B2B8E139800EAC134 /* ScreenMenus.swift */,
 				081BAA5F2B8E155F00EAC134 /* ScreenItems.swift */,
+				081BAA712B8E4A0800EAC134 /* ResolutionItems.swift */,
+				081BAA732B8E4A3800EAC134 /* RefreshItems.swift */,
+				081BAA752B8E4A4E00EAC134 /* WallpaperItem.swift */,
 				081BAA592B8E137900EAC134 /* NSScreen.swift */,
 				081BAA672B8E21AF00EAC134 /* ScreenMode.swift */,
+				081BAA6B2B8E450700EAC134 /* Picture.swift */,
+				081BAA6C2B8E450700EAC134 /* PictureFitPicker.swift */,
+				081BAA6D2B8E450700EAC134 /* PictureWell.swift */,
 				081BAA4E2B8E10DD00EAC134 /* Assets.xcassets */,
 				081BAA532B8E10DD00EAC134 /* Resolute.entitlements */,
 				081BAA502B8E10DD00EAC134 /* Preview Content */,
@@ -155,7 +173,13 @@
 				081BAA6A2B8E320900EAC134 /* MainMenu.swift in Sources */,
 				081BAA602B8E155F00EAC134 /* ScreenItems.swift in Sources */,
 				081BAA5C2B8E139800EAC134 /* ScreenMenus.swift in Sources */,
+				081BAA6E2B8E450700EAC134 /* Picture.swift in Sources */,
+				081BAA762B8E4A4E00EAC134 /* WallpaperItem.swift in Sources */,
+				081BAA742B8E4A3800EAC134 /* RefreshItems.swift in Sources */,
 				081BAA4B2B8E10DC00EAC134 /* ResoluteApp.swift in Sources */,
+				081BAA6F2B8E450700EAC134 /* PictureFitPicker.swift in Sources */,
+				081BAA702B8E450700EAC134 /* PictureWell.swift in Sources */,
+				081BAA722B8E4A0800EAC134 /* ResolutionItems.swift in Sources */,
 				081BAA682B8E21AF00EAC134 /* ScreenMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +313,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resolute/Resolute.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_ASSET_PATHS = "\"Resolute/Preview Content\"";
 				DEVELOPMENT_TEAM = J8YJLAG3D5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -300,7 +324,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.waiata.Resolute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -316,7 +341,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resolute/Resolute.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2000;
 				DEVELOPMENT_ASSET_PATHS = "\"Resolute/Preview Content\"";
 				DEVELOPMENT_TEAM = J8YJLAG3D5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -327,7 +352,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.waiata.Resolute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
