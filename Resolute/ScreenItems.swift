@@ -15,19 +15,16 @@ struct ScreenItems: View {
     @State var refresh = false
     
     var body: some View {
-        Group {
-            Toggle(isOn: $refresh) {
-                Text(refresh.description)
-            }
-            .onReceive(NotificationCenter.default.publisher(for: NSApplication.didChangeScreenParametersNotification)) { _ in
-                refresh.toggle()
-            }
-            ResolutionItems(screen: screen)
-            Divider()
-            RefreshItems(screen: screen)
-            Divider()
-            WallpaperItem(screen: screen)
+        Toggle(isOn: $refresh) {
+            Text(refresh.description)
         }
+        .hidden()
+        ResolutionItems(screen: screen)
+        Divider()
+        RefreshItems(screen: screen)
+        Divider()
+        WallpaperItem(screen: screen)
+        
     }
 }
 

@@ -229,3 +229,7 @@ extension NSScreen: Identifiable {
     }
     
 }
+
+extension NSScreen {
+    
+}

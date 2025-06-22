@@ -25,6 +25,7 @@ struct ResolutionItems: View {
                 }
             )
             
+            
             Toggle(isOn: on) {
                 Text(String(format: "%.fx%.f", resolution.width, resolution.height))
             }
